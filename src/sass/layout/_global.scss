@@ -23,4 +23,36 @@ img {
   max-width: 960px;
   margin: 0 auto;
   padding: 1rem;
+
+
+  &--flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    @include breakpoint ('screen-sm') {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: start;
+    }
+
+  }
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border: 1px solid $primary;
+  background-color: $primary;
+  border-radius: $base-radius;
+  font-family: 'Montserrat', sans-serif;
+  color: $white;
+  font-size: 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    background-color: darken($primary, 10%);
+  }
 }

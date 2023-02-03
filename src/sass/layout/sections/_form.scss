@@ -1,0 +1,86 @@
+.form {
+    width: 100%;
+
+    @include breakpoint ('screen-sm') {
+        width: 48%;
+    }
+
+    label {
+        display: block;
+        color: $light;
+        font-size: .8rem;
+
+        &[for=form-save] {
+            display: inline;
+        }
+    }
+
+    input:not(.btn),
+    select {
+        border: 1px solid lighten($light, 40%);
+        padding: 1rem 1rem 1rem 3rem;
+        border-radius: $base-radius;
+        font-family: 'Montserrat', sans-serif;
+        color: $light;
+        margin-bottom: 1rem;
+        width: 100%;
+
+        &::placeholder {
+            color: lighten($light, 30%);
+        }
+
+        &[type=checkbox],
+        &[type=submit] {
+            width: auto;
+        }
+    }
+
+    &__group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        >* {
+            width: 48%;
+        }
+
+        &--end {
+            justify-content: end;
+        }
+    }
+}
+
+#form-email {
+    background: url(../assets/email.svg) 1rem 50% no-repeat;
+    background-size: 1.2rem;
+}
+
+#form-phone {
+    background: url(../assets/phone.svg) 1rem 50% no-repeat;
+    background-size: 1.2rem;
+}
+
+#form-name {
+    background: url(../assets/name.svg) 1rem 50% no-repeat;
+    background-size: 1.2rem;
+}
+
+#form-address {
+    background: url(../assets/address.svg) 1rem 50% no-repeat;
+    background-size: 1.2rem;
+}
+
+#form-city {
+    background: url(../assets/city.svg) 1rem 50% no-repeat;
+    background-size: 1.2rem;
+}
+
+#form-country {
+    background: url(../assets/country.svg) 1rem 50% no-repeat;
+    background-size: 1.2rem;
+}
+
+#form-code {
+    background: url(../assets/code.svg) 1rem 50% no-repeat;
+    background-size: 1.2rem;
+}
